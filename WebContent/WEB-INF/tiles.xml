@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition"
+		template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+
+
+	<definition name="showHome" extends="base.definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+	</definition>
+
+	<definition name="showTeamInformation"
+		extends="base.definition">
+		<put-attribute name="title" value="Team Information" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/showTeamInformation.jsp" />
+	</definition>
+
+	<definition name="showLogin"
+		template="/WEB-INF/jsp/login.jsp" />
+
+	<definition name="showAccessDenied"
+		extends="base.definition">
+		<put-attribute name="title" value="AccessDenied" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/access-denied.jsp" />
+	</definition>
+
+	<definition name="viewTeamInformation"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="View Team Information" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/viewTeamInformation.jsp" />
+	</definition>
+
+	<definition name="viewTeamInformationList"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="View Team Information List" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/viewTeamInformationList.jsp" />
+	</definition>
+
+</tiles-definitions>  
